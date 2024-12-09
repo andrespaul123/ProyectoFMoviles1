@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.UsuarioFormActivity">
+
+    <!-- Contenedor principal para centrar el formulario -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/choferCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Imagen representativa -->
+            <ImageView
+                android:id="@+id/imgChoferLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Logo de formulario"
+                android:src="@drawable/rapidito" />
+
+            <!-- Título del formulario -->
+            <TextView
+                android:id="@+id/txtTituloChofer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Registro de Cliente"
+                android:textColor="#333333"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Campo de nombre -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtChoferNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtUsuarioNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo de correo electrónico -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtChoferEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtUsuarioEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo Electrónico" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo de contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtChoferPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtUsuarioPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Botón para registrar -->
+            <Button
+                android:id="@+id/btnGuardarUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_background_register"
+                android:text="Registrar usuario"
+                android:textColor="#FFFFFF" />
+
+            <!-- Botón para cancelar -->
+            <Button
+                android:id="@+id/btnCancelarUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background_register"
+                android:text="Cancelar"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

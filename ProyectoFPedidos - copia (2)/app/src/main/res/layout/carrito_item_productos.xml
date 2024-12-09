@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Valor de Nombre -->
+    <TextView
+        android:id="@+id/lblcarritonombreP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Nombre Producto"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+    <!-- Título Cantidad -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad:"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/lblcarritonombreP"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Valor de Cantidad -->
+    <TextView
+        android:id="@+id/lblcarritocantidadP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <!-- Título Precio -->
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio:"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/lblcarritocantidadP"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Valor de Precio -->
+    <TextView
+        android:id="@+id/lblcarritoPrecioP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$20.00"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView7" />
+
+    <!-- Botón Más (Incrementar) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnMas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Incrementar"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintTop_toBottomOf="@id/lblcarritocantidadP"
+        app:layout_constraintEnd_toStartOf="@id/btnMenos"
+        app:layout_constraintStart_toEndOf="@id/lblcarritocantidadP" />
+
+    <!-- Botón Menos (Decrementar) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnMenos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Decrementar"
+        android:clickable="true"
+        android:src="@android:drawable/ic_delete"
+        app:layout_constraintTop_toBottomOf="@id/lblcarritocantidadP"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
